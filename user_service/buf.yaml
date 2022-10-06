@@ -1,0 +1,16 @@
+version: v1
+
+breaking:
+  use:
+    - FILE
+
+name: buf.build/wupidi/user_service
+
+deps:
+  - buf.build/googleapis/googleapis
+
+lint:
+  use:
+    - DEFAULT
+  ignore:
+    - google

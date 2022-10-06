@@ -1,0 +1,38 @@
+syntax = "proto3";
+package service.v1;
+option go_package = "example.com/user_service/gen/go/service/v1";
+
+import "model/v1/user_model.proto";
+import "google/api/annotations.proto";
+
+service UserService {
+
+    rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {
+        option (google.api.http) = {
+            post: "/v1/users"
+            body: "user"
+        };
+    }
+
+    rpc GetUser(GetUserRequest) returns (GetUserResponse) {
+        option (google.api.http) = {
+            get: "/v1/users"
+        };
+    }
+}
+
+message CreateUserRequest {
+    model.v1.UserWrite user = 1;    
+}
+
+message CreateUserResponse {
+    string id = 1;    
+}
+
+message GetUserRequest {
+    string id = 1;
+}
+
+message GetUserResponse {
+    model.v1.UserRead user = 1;
+}
