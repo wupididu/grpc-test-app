@@ -1,4 +1,4 @@
-module pkg/user_service
+module grpc-test-app/user_service
 
 go 1.19
 
