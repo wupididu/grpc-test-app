@@ -1,4 +1,4 @@
-module grpc-test-app/user_service
+module github.com/wupididu/grpc-test-app/user_service
 
 go 1.19
 
