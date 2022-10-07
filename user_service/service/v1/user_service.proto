@@ -1,6 +1,6 @@
 syntax = "proto3";
 package service.v1;
-option go_package = "example.com/user_service/gen/go/service/v1";
+option go_package = "github.com/wupididu/grpc-test-app/user_service/service/v1";
 
 import "model/v1/user_model.proto";
 import "google/api/annotations.proto";
